@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Recanto das Marias - Espaço para festas e eventos Poços de Caldas MG.">
+        
+        <title>Recanto das Marias | Espaço para Festas</title>
+
+        
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    
+    <body>
+
+    <header>
+        <div class="logo">
+        <a href="inicio" class="logo">
+            <img src="img/Logo.png" alt="logo Recanto das Marias">
+            <span class="logo-icon">Recanto das Marias</span>
+        </a>
+        </div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">O Recanto</a>
+            <a href="#estrutura">Estrutura</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="inicio" id="inicio">
+        <div class="inicio-conteudo">
+            <h1>
+                Momentos especiais
+                <span>merecem um lugar especial.</span>
+            </h1>
+
+            <p>
+                Um espaço acolhedor para celebrar
+                a vida e criar lembranças inesquecíveis
+            </p>
+
+            <a href="#contato" class="botao">CONSULTE SUA DATA</a>
+        </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <div class="sobre-texto">
+            <p class="subtitulo">SEJA BEM-VINDO</p>
+
+            <h2>Conheça o <span>Recanto das Marias</span></h2>
+
+            <p>
+            O Recanto das Marias é um espaço especial
+            para reunir pessoas queridas e celebrar
+            os melhores momentos da vida.
+            </p>
+
+            <p>
+            Localizado na zona rural de Poços de Caldas,
+            oferece um ambiente acolhedor para festas,
+            comemorações e confraternizações.
+            </p>
+
+            <a href="#estrutura" class="link">Conheça nossa estrutura</a>
+
+        </div>
+    </section>
+
+    <section class="estrutura" id="estrutura">
+        <div class="titulo-secao">
+            <p class="subtitulo">CONFORTO E ACONCHEGO</p>
+            <h2>Nossa estrutura</h2>
+            <p>Um espaço preparado para receber você e seus convidados.</p>
+        </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="icone">⌂</div>
+            <h3>Salão coberto</h3>
+            <p>
+                Ambiente acolhedor e protegido
+                para realizar sua comemoração.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icone">♨️</div>
+            <h3>Churrasqueira</h3>
+            <p>
+                Ideal para reunir amigos e familiares
+                em momentos especiais.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icone">🚘</div>
+            <h3>Estacionamento</h3>
+            <p>
+                Mais comodidade para voçê
+                e seus convidados.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icone">🛝</div>
+            <h3>Parquinho</h3>
+            <p>
+                Diversão garantida para as crianças.
+            </p>
+        </div>
+
+    </div>
+
+    </section>
+
+    <section class="galeria" id="galeria">
+        <div class="titulo-secao">
+            <p class="subtitulo">NOSSOS AMBIENTES</p>
+            <h2>Momentos para recordar</h2>
+        </div>
+
+        <div class="fotos">
+        <img src="img/salao1.png" alt="salao1">
+        <img src="img/salao.png" alt="Salao">
+        <img src="img/churrasqueira.png" alt="Churrasqueira">
+        <img src="img/giragrill.png" alt="giragrill">
+        <img src="img/patio.png" alt="patio">
+        <img src="img/estacionamento.png" alt="Estacionamento">
+        <img src="img/parquinho.png" alt="Parquinho">
+        </div>
+    </section>
+
+    <section class="eventos" id="eventos">
+
+    <div>
+        <p class="subtitulo">CELEBRE A VIDA</p>
+        <h2>Todo motivo para comemorar é especial.</h2>
+        <p>
+            Aniversários, casamentos, confraternizações
+            e encontros em família.
+        </p>
+
+        <a href="#contato" class="botao">FAÇA SEU ORÇAMENTO</a>
+    </div>
+    </section>
+
+    <section class="contato" id="contato">
+        <div class="contato-texto">
+            <p class="subtitulo">VAMOS CONVERSAR</p>
+            <h2>Reserve seu momento especial!</h2>
+
+            <p>
+                Entre em contato para consultar datas disponíveis
+                e solicitar seu orçamento.
+            </p>
+
+            <p><strong>Localização:</strong> Sitío Belas Águas, Poços de Caldas - MG</p>
+        </div>
+
+        <form id="formReserva">
+            <h3>Solicite um orçamento</h3>
+
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nome" 
+            placeholder="Digite seu nome" required>
+
+            <label for="tipo">Tipo do evento</label>
+            <select id="tipo" required>
+                <option value="">Selecione</option>
+                <option>Aniversário</option>
+                <option>Casamento</option>
+                <option>Confraternização</option>
+                <option>Encontro familiar</option>
+                <option>Outro</option>
+
+            </select>
+
+            <label for="data">Data desejada</label>
+            <input type="data" id="data" required>
+
+            <label for="convidados">Quantidade de convidados</label>
+            <input type="number" id="convidados" min="1" placeholder="80">
+
+            <button type="submit" class="botao botao-form" >
+                ENVIAR PELO WHATSAPP
+            </button>
+
+        </form>
+
+    </section>
+
+    <footer>
+        <h2>Recanto das Marias</h2>
+        <p>Seu momento especial merece um lugar especial.</p>
+        <p>Poços de Caldas - MG</p>
+        <small>© <span id="ano"></span>Recanto das Marias. Todos os direitos reservados.</small>
+    </footer>
+
+    <a href="https://wa.me/5535999686086" id="whatsapp" class="whatsapp" target="_blank"
+    aria-label="Whatsapp" rel="noopener noreferrer">
+        Fale conosco pelo Whatsapp</a>
+
+<script src="script.js"></script>
+
+    </body>
+</html>

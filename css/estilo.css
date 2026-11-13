@@ -1,0 +1,646 @@
+/*Configurações Gerais*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root{
+    --verde:#96a134;
+    --bege: #f5f1e8;
+    --dourado: #c6a46a;
+    --marrom: #594936;
+}
+
+/*Cabeçalho*/
+
+header{
+    width: 100%;
+    min-height: 85px;
+    padding: 15px 7%;
+    background: #818c21;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--dourado);
+}
+
+/* INÍCIO */
+
+.inicio {
+    min-height: 650px;
+    background:
+        linear-gradient(rgba(20,35,25,.65), rgba(20,35,25,.65)),
+        url("../img/fundo.png");
+
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 10%;
+    color: white;
+}
+
+.inicio-conteudo {
+    max-width: 700px;
+}
+
+.inicio-conteudo p:first-child {
+    color: var(--dourado);
+
+    letter-spacing: 3px;
+    font-size: 16px;
+}
+
+.inicio h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.2;
+    margin: 25px 0;
+}
+
+.inicio h1 span {
+    display: block;
+    color: var(--dourado);
+}
+
+.inicio-conteudo > p:not(:first-child) {
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/*para celular*/
+@media(max-width: 480px){
+    .inicio{
+        min-height: 500px;
+        background-position: center;
+    }
+}
+
+/* SOBRE */
+
+.sobre {
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre-imagem,
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.subtitulo {
+    color: #64635e;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+
+.sobre h2,
+.titulo-secao h2,
+.contato h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.sobre h2 span {
+    color: #a58a58;
+}
+
+.sobre-texto p:not(.subtitulo) {
+    color: #687168;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--verde);
+    text-decoration: none;
+    border-bottom: 1px solid var(--dourado);
+    padding-bottom: 5px;
+}
+
+/* BOTÕES */
+
+.botao {
+    display: inline-block;
+    padding: 15px 25px;
+    background: white;
+    color: var(--verde);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.botao:hover {
+    background: #4fe941;
+    transform: translateY(-3px);
+}
+
+/* ESTRUTURA */
+
+.estrutura {
+    background: var(--bege);
+    padding: 90px 8%;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-secao p:last-child {
+    color: #687168;
+    margin-top: 10px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
+}
+
+.card {
+    padding: 35px;
+    background: #fff;
+    border: 1px solid #e0d8c8;
+    transition: .3s;
+    box-sizing: border-box;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px #00000012;
+}
+
+.icone {
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--dourado);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #4c985c;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.card h3 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #687168;
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+/*celulares*/
+
+@media (max-width: 480px){
+    .cards{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card{
+        padding: 25px 20px;
+    }
+
+    .card h3{
+        font-size: 20px;
+    }
+
+    .card p{
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .icone{
+        margin-bottom: 15px;
+    }
+}
+
+
+/* GALERIA */
+
+.galeria {
+    padding: 90px 8%;
+}
+
+.fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.fotos img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.fotos img:hover {
+    transform: scale(1.02);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.logo span {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #f5f1e8;
+}
+
+/* EVENTOS */
+
+.eventos {
+    padding: 100px 10%;
+    background: var(--verde);
+    color: white;
+}
+
+.eventos div {
+    max-width: 600px;
+}
+
+.eventos h2 {
+    font-family: Georgia, serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.eventos div > p:not(.subtitulo) {
+    margin-bottom: 30px;
+    color: #ddd;
+    line-height: 1.8;
+}
+
+/* CONTATO */
+
+.contato {
+    padding: 100px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    background: var(--bege);
+}
+
+.contato-texto > p:not(.subtitulo) {
+    color: #687168;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+form {
+    background: white;
+    padding: 35px;
+    box-shadow: 0 10px 30px #00000010;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+form h3 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin: 15px 0 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    background: #fbfaf6;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: var(--dourado);
+}
+
+.botao-form {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/*celulares*/
+@media (max-width: 480px){
+    
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    form{
+        padding: 20px 15px;
+        width: 100%;
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    form h3{
+        font-size: 21px;
+    }
+
+    form label {
+        font-size: 14px;
+    }
+
+    form input,
+    form select,
+    form textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .botao-form{
+        width: 100%;
+        max-width: 100%;
+        padding: 14px;
+        margin-top: 20px;
+        box-sizing: border-box;
+    }
+}
+
+
+/* RODAPÉ */
+
+footer {
+    padding: 45px 20px;
+    text-align: center;
+    background: #818c21;
+    color: white;
+}
+
+footer h2 {
+    font-family: Georgia, serif;
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+footer small {
+    display: block;
+    margin-top: 25px;
+    color: #aaa;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background:#3a8328;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/*Celulares*/
+
+@media(max-width: 768px){
+    .galeria{
+        padding: 40px 5%;
+    }
+
+    .fotos{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .fotos img{
+        height: 180px;
+    }
+
+}
+
+/*celulares pequenos*/
+
+@media (max-width: 480px) {
+    .fotos{
+        grid-template-columns: 1fr;
+    }
+
+    .fotos img{
+        height: 240px;
+    }
+}
+
+/*Ajustes gerais para celular*/
+
+@media screen and (max-width: 768){
+
+    html, body{
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+        overflow-x: clip;
+        overflow-y: auto;
+    }
+
+    header{
+        padding: 15px 5%;
+        gap: 15px;
+    }
+
+    nav{
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a{
+        font-size: 16px;
+    }
+
+    .sobre{
+        flex-direction: column;
+        padding: 50px 5%;
+        gap: 30px
+    }
+
+    .sobre-imagem,
+    .sobre-texto{
+        width: 100%;
+    }
+
+    .sobre-imagem img{
+        height: 200px;
+    }
+
+    .contato{
+        grid-template-columns: 1fr;
+        padding: 50px 5%;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .contato-texto,
+    .contato form{
+        width: 100%;
+        min-width: 0;
+    }
+
+    .contato h2{
+        font-size: 32px;
+    }
+
+    form{
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 20px 15px;
+    }
+
+    .eventos{
+        padding: 50px 5%;
+    }
+
+    .eventos h2{
+        font-size: 32px;
+    }
+}
+
+/* RESPONSIVIDADE - CELULARES */
+
+@media screen and (max-width: 768px) {
+html, body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    .contato {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 45px 20px;
+        gap: 35px;
+    }
+
+    .contato-texto {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .contato form {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 25px 20px;
+    }
+
+    .contato h2 {
+        font-size: 32px;
+    }
+
+    .contato form input,
+    .contato form select,
+    .contato form textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .whatsapp {
+        right: 12px;
+        bottom: 15px;
+        font-size: 11px;
+        padding: 13px 16px;
+    }
+}
